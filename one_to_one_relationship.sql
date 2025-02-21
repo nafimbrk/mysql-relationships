@@ -1,5 +1,8 @@
--- cara buat one to one relationship dengan membuat kolom foreign key lalu set menggunakan unique key, hal dapat ini mencegah terjadi data di kolom tersebut agar tidak duplikat
--- atau cara lainnya bisa membuat tabel dengan pk yang sama, sehingga tidak butuh lagi kolom untuk fk
+-- tiap data disebuah tabel hanya boleh berelasi ke maksimal 1 data di tabel lainnya
+-- gk boleh ada relasi lebih dari 1 data
+-- contoh apk toko online yg terdata fitur e wallet, dan 1 customer cuma boleh punya 1 wallet
+-- cara buat one to one relationship kita bisa membuat kolom foreign key lalu set kolom tersebut menggunakan unique key, hal ini dapat mencegah terjadi data di kolom tersebut agar tidak duplikat
+-- atau cara lainnya kita bisa membuat tabel dengan primary key yang sama, sehingga tidak butuh lagi kolom untuk foreign key
 
 -- membuat table wallet
 CREATE TABLE wallet (
@@ -18,4 +21,3 @@ SELECT * FROM wallet;
 
 SELECT customers.email, wallet.balance
 FROM wishlist JOIN customers ON (wallet.id_customer = customers.id);
-
