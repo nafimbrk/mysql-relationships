@@ -2,7 +2,8 @@
 -- gk boleh ada relasi lebih dari 1 data
 -- contoh apk toko online yg terdata fitur e wallet, dan 1 customer cuma boleh punya 1 wallet
 -- cara buat one to one relationship kita bisa membuat kolom foreign key lalu set kolom tersebut menggunakan unique key, hal ini dapat mencegah terjadi data di kolom tersebut agar tidak duplikat
--- atau cara lainnya kita bisa membuat tabel dengan primary key yang sama, sehingga tidak butuh lagi kolom untuk foreign key
+
+-- penjelasan diagram: misal kita bikin wallet dengan id_customernya 1 jangan sampe ada lagi yg bikin wallet dengan id_customer 1, kalo gk di tambahin unique hal tersebut bisa terjadi tapi kalo di kasih unique maka hal tersebut gk akan bisa, jika fk(customer_id) unique jadi nanti cuma ada 1 customer doang di tabel wallet jadi gk boleh ada 1 customer punya 2 wallet
 
 -- membuat table wallet
 CREATE TABLE wallet (

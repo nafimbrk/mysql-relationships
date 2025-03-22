@@ -3,6 +3,8 @@
 -- contoh relasi antar tabel categories dan products, dimana satu category bisa digunakan oleh lebih dari satu products, yang artinya relasinya one category to many products
 -- pembuatannnya sebenernya sama dengan one to one, yg membedakan adalah kita tidak perlu menggunakan unique key, karena datannya memang bisa berkali-kali ditambahkan di tabel relasinya
 
+-- penjelasan diagram: satu kategori dia bisa berada di beberapa product
+
 -- membuat tabel category
 CREATE TABLE categories
 (
