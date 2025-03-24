@@ -28,4 +28,3 @@ INNER JOIN products ON (products.id_category = categories.id);
 
 SELECT * FROM categories
 JOIN products ON (products.id_category = categories.id); -- hasilnya sama aja
-

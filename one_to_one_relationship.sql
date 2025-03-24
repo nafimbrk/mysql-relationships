@@ -21,4 +21,4 @@ INSERT INTO wallet(id_customer) VALUES (1), (3); -- ini kalo dieksekusi lagi mak
 SELECT * FROM wallet;
 
 SELECT customers.email, wallet.balance
-FROM wishlist JOIN customers ON (wallet.id_customer = customers.id);
+FROM wallet JOIN customers ON (wallet.id_customer = customers.id);

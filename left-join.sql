@@ -8,3 +8,6 @@
 SELECT * FROM categories
 LEFT JOIN products ON (products.id_category = categories.id);
 
+-- note sendiri
+-- kiri kanannya tabel itu ditentukan berdasarkan saat dia join
+-- misal from wallet join customer, maka wallet kiri dan customer kanan

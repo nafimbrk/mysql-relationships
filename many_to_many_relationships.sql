@@ -82,3 +82,6 @@ JOIN products ON (products.id = orders_detail.id_product);
 SELECT orders.id, products.id, orders_detail.quantity, orders_detail.price FROM orders
 JOIN orders_detail ON (orders_detail.id_order = orders.id)
 JOIN products ON (products.id = orders_detail.id_product);
+
+-- note sendiri
+-- kalo ini praktek ambil data/join nya pake tabel orders, mungkin karna many to many ya

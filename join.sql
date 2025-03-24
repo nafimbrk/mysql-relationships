@@ -44,3 +44,8 @@ FROM wishlist
 JOIN products ON (products.id = wishlist.id_product)
 JOIN customers ON (customers.id = wishlist.id_customer);
 -- WHERE ...  kalo mau menambahkan kondisi where dsb tinggal tambahkan di sini
+
+-- note sendiri
+-- on nya mau pk dulu gk masalah tapi disarankan fk duu
+-- usahain kalo select data yg berelasi/join itu lewat tabel childnya/tabel yg memiliki foreign key (ya walapun kalo gk lewat tabel child tetep bisa tapi ada beberapa kasus itu gk bisa dilakuin kalo gk lewat tabel child nya)
+-- satu lagi kalo misal mau nampilin data mana dulu misal category terus diikuti product maka ngambil datanya/joinnya pake category tapi ini hanya berlaku kalo pake *, kalo selectnya itu di pilih kolom mana yg mau di select kan bisa pilih manual tanpa harus urut sesuai urutannya bahkan bisa nampilin sebagian kolom aja kan
