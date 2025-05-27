@@ -13,6 +13,11 @@ Cara tahu:
 
 Jika satu baris di A hanya boleh punya satu pasang data di B → One to One.
 
+users	    user_profiles
+id (PK)	  id (PK)
+name	    user_id (FK + UNIQUE)
+email	    phone
+
 ✅ 2. One to Many (1:N)
 Ciri-ciri:
 
@@ -30,6 +35,11 @@ Jika satu baris di A bisa punya banyak baris di B → One to Many.
 
 Biasanya ditandai dengan foreign key di tabel B (anak).
 
+kelas	        mahasiswa
+id (PK)	      id (PK)
+nama_kelas	  nama
+              kelas_id (FK)
+
 ✅ 3. Many to Many (M:N)
 Ciri-ciri:
 
@@ -46,6 +56,11 @@ Perlu tabel siswa_ekstrakurikuler.
 Cara tahu:
 
 Jika kedua tabel saling bisa punya banyak data dari tabel lain → Many to Many.
+
+siswa	    ekstrakurikuler	    siswa_ekskul (pivot)
+id (PK)	  id (PK)	            id (PK)
+nama	    nama_ekskul	        siswa_id (FK)
+                              ekskul_id (FK)
 
 🔍 Tips Menentukan Relasi:
 Gunakan kalimat “Satu [A] bisa punya berapa [B]?” dan sebaliknya.
